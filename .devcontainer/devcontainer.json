@@ -1,0 +1,21 @@
+{
+  "name": "REA Reverse Engineering Environment",
+  "image": "://microsoft.com",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "25",
+      "jdkDistro": "tem"
+    }
+  },
+  "containerEnv": {
+    "GHIDRA_INSTALL_DIR": "/workspaces/.tools/ghidra"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
